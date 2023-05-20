@@ -9,4 +9,5 @@
     <string name="password">Kata Sandi</string>
     <string name="login">Masuk</string>
     <string name="tamara">Tamara</string>
+    <string name="harus_diisi">Harus diisi</string>
 </resources>

@@ -8,59 +8,54 @@
 
     <ImageView
         android:id="@+id/imgLogo"
-        android:layout_width="205dp"
-        android:layout_height="190dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.029"
         android:contentDescription="@string/tamara"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/ic_logo" />
 
     <TextView
         android:id="@+id/textHi"
-        android:layout_width="63dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/imgLogo"
-        android:layout_marginTop="148dp"
         android:fontFamily="@font/poppinsmedium"
         android:text="@string/hi"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imgLogo"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
         tools:ignore="TextSizeCheck" />
 
     <TextView
         android:id="@+id/textHi2"
-        android:layout_width="332dp"
-        android:layout_height="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/imgLogo"
         android:fontFamily="@font/poppinsmedium"
         android:text="@string/hi2"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.202"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textHi"
         tools:ignore="TextSizeCheck" />
 
     <TextView
         android:id="@+id/textDontHaveAcc"
-        android:layout_width="336dp"
-        android:layout_height="34dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/imgLogo"
         android:fontFamily="@font/poppinssemibold"
         android:text="@string/donthaveacc"
         android:textColor="#6B6B6B"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.213"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textHi2"
         tools:ignore="TextSizeCheck" />
@@ -70,7 +65,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="14dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="16dp"
+        app:helperText="@string/harus_diisi"
+        app:helperTextTextColor="@android:color/holo_red_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textDontHaveAcc"
@@ -79,12 +77,13 @@
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
-            android:layout_height="51dp"
+            android:layout_height="match_parent"
             android:background="@drawable/edit_text"
             android:fontFamily="@font/poppinsregular"
             android:hint="@string/email"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
+            android:lines="1"
             android:paddingStart="14dp"
             tools:ignore="RtlSymmetry,SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -93,18 +92,22 @@
         android:id="@+id/passwordTextLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="16dp"
         android:orientation="vertical"
-        android:padding="14dp"
+        android:layout_marginHorizontal="16dp"
+        app:helperText="@string/harus_diisi"
+        app:helperTextTextColor="@android:color/holo_red_light"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailTextLayout"
         app:passwordToggleEnabled="true"
+        app:counterEnabled="true"
+        app:counterMaxLength="16"
         app:startIconDrawable="@drawable/ic_lock">
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
-            android:layout_height="51dp"
+            android:layout_height="match_parent"
             android:background="@drawable/edit_text"
             android:fontFamily="@font/poppinsregular"
             android:hint="@string/password"
@@ -114,19 +117,19 @@
             app:passwordToggleEnabled="true"
             tools:ignore="RtlSymmetry,SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="312dp"
         android:height="51dp"
+        android:elevation="3dp"
+        android:translationZ="3dp"
+        android:stateListAnimator="@null"
         android:fontFamily="@font/poppinssemibold"
         android:shadowColor="@color/cardview_shadow_end_color"
         android:text="@string/login"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="64dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordTextLayout"
-        app:layout_constraintVertical_bias="0.406" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordTextLayout"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
