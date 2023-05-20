@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Tamara</string>
     <string name="back">Keluar</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="hi">Halo, </string>
+    <string name="hi2">Masukkan Akun Anda</string>
+    <string name="donthaveacc">Belum punya akun? <font color="#006C4E">Daftar akun.</font></string>
+    <string name="email">user@email.com</string>
+    <string name="password">Kata Sandi</string>
+    <string name="login">Masuk</string>
+    <string name="tamara">Tamara</string>
 </resources>
