@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FBFDF9"
     tools:context=".LoginActivity">
 
     <ImageView
@@ -11,10 +12,10 @@
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:layout_marginTop="24dp"
+        android:contentDescription="@string/tamara"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/tamara"
         app:srcCompat="@drawable/ic_logo" />
 
     <TextView
@@ -22,11 +23,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/imgLogo"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/poppinsmedium"
         android:text="@string/halo"
         android:textSize="24sp"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgLogo"
         tools:ignore="TextSizeCheck" />
@@ -36,11 +37,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/imgLogo"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/poppinsmedium"
         android:text="@string/masukkan_akun"
         android:textSize="24sp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textHi"
         tools:ignore="TextSizeCheck" />
@@ -50,12 +51,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/imgLogo"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/poppinssemibold"
         android:text="@string/tidak_punya_akun"
         android:textColor="#6B6B6B"
         android:textSize="14sp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textHi2"
         tools:ignore="TextSizeCheck" />
@@ -64,9 +65,9 @@
         android:id="@+id/emailTextLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="32dp"
         android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
         app:helperText="@string/harus_diisi"
         app:helperTextTextColor="@android:color/holo_red_light"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,16 +93,16 @@
         android:id="@+id/passwordTextLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
         android:layout_marginTop="16dp"
         android:orientation="vertical"
-        android:layout_marginHorizontal="16dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="16"
         app:helperText="@string/harus_diisi"
         app:helperTextTextColor="@android:color/holo_red_light"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailTextLayout"
         app:passwordToggleEnabled="true"
-        app:counterEnabled="true"
-        app:counterMaxLength="16"
         app:startIconDrawable="@drawable/ic_lock">
 
         <EditText
@@ -117,19 +118,21 @@
             app:passwordToggleEnabled="true"
             tools:ignore="RtlSymmetry,SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="76dp"
         android:elevation="3dp"
-        android:translationZ="3dp"
-        android:stateListAnimator="@null"
         android:fontFamily="@font/poppinsbold"
         android:shadowColor="@color/cardview_shadow_end_color"
+        android:stateListAnimator="@null"
         android:text="@string/daftar"
-        android:layout_marginTop="64dp"
-        android:layout_marginHorizontal="16dp"
+        android:translationZ="3dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordTextLayout"/>
+        app:layout_constraintTop_toBottomOf="@+id/passwordTextLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

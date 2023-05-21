@@ -18,4 +18,12 @@
     <string name="panjang_password">Kata sandi harus 8 karakter atau lebih</string>
     <string name="panjang_nama">Nama harus 3 karakter atau lebih</string>
     <string name="invalid_form">Isi form dengan benar</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_community">Komunitas</string>
+    <string name="title_profile">Profil</string>
+    <string name="cuaca">Cuaca</string>
+    <string name="alamat">Alamat</string>
+    <string name="derajat">0 derajat celcius</string>
+    <string name="saran_kegiatan">Saran Kegiatan</string>
 </resources>
