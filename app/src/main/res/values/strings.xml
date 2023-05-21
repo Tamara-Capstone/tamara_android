@@ -2,12 +2,20 @@
     <string name="app_name">Tamara</string>
     <string name="back">Keluar</string>
     <string name="title_activity_login">LoginActivity</string>
-    <string name="hi">Halo, </string>
-    <string name="hi2">Masukkan Akun Anda</string>
-    <string name="donthaveacc">Belum punya akun? <font color="#006C4E">Daftar akun.</font></string>
+    <string name="halo">Halo, </string>
+    <string name="masukkan_akun">Masukkan Akun Anda</string>
+    <string name="tidak_punya_akun">Belum punya akun? <font color="#006C4E">Daftar akun.</font></string>
     <string name="email">user@email.com</string>
     <string name="password">Kata Sandi</string>
-    <string name="login">Masuk</string>
+    <string name="nama">Nama</string>
+    <string name="login">MASUK</string>
+    <string name="daftar_akun">Daftar Akun</string>
+    <string name="punya_akun">Sudah punya akun? <font color="#006C4E">Masuk sini.</font></string>
+    <string name="daftar">DAFTAR</string>
     <string name="tamara">Tamara</string>
     <string name="harus_diisi">Harus diisi</string>
+    <string name="email_tidak_valid">Email tidak valid</string>
+    <string name="panjang_password">Kata sandi harus 8 karakter atau lebih</string>
+    <string name="panjang_nama">Nama harus 3 karakter atau lebih</string>
+    <string name="invalid_form">Isi form dengan benar</string>
 </resources>
