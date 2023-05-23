@@ -36,7 +36,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppinsregular"
                     android:text="@string/alamatdetail"
-                    android:textSize="12dp"
+                    android:textSize="12sp"
                     tools:ignore="TextSizeCheck" />
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -49,7 +49,7 @@
                         android:layout_height="30dp"
                         android:fontFamily="@font/poppinsregular"
                         android:text="@string/derajat"
-                        android:textSize="20dp"
+                        android:textSize="20sp"
                         tools:ignore="TextSizeCheck" />
 
                     <TextView
@@ -58,7 +58,7 @@
                         android:layout_height="30dp"
                         android:fontFamily="@font/poppinsregular"
                         android:text="@string/derajatdetail"
-                        android:textSize="20dp"
+                        android:textSize="20sp"
                         tools:ignore="TextSizeCheck" />
 
                 </LinearLayout>
@@ -68,7 +68,7 @@
                     android:layout_height="62dp"
                     android:fontFamily="@font/poppinsregular"
                     android:text="@string/saran_kegiatandetail"
-                    android:textSize="12dp"
+                    android:textSize="12sp"
                     tools:ignore="TextSizeCheck" />
             </LinearLayout>
 
@@ -80,7 +80,8 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerInParent="true"
                 android:layout_centerVertical="true"
-                android:src="@drawable/ic_cloud" />
+                android:src="@drawable/ic_cloud"
+                android:contentDescription="imgCloud"/>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
     <!-- End Cuaca-->
@@ -124,7 +125,8 @@
                     <ImageView
                         android:layout_width="15dp"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_calender" />
+                        android:src="@drawable/ic_calender"
+                        android:contentDescription="imgCalender"/>
 
                     <TextView
                         android:id="@+id/ramalan"
@@ -275,7 +277,7 @@
                             android:paddingLeft="20dp"
                             android:paddingTop="5dp"
                             android:text="@string/hari"
-                            android:textSize="12dp"
+                            android:textSize="12sp"
                             tools:ignore="TextSizeCheck" />
 
                         <ImageView
@@ -291,7 +293,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppinsregular"
                             android:text="@string/derajat"
-                            android:textSize="12dp"
+                            android:textSize="12sp"
                             tools:ignore="TextSizeCheck" />
 
                         <TextView
@@ -300,7 +302,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppinsregular"
                             android:text="@string/derajatdetail"
-                            android:textSize="12dp"
+                            android:textSize="12sp"
                             tools:ignore="TextSizeCheck" />
                     </LinearLayout>
 
