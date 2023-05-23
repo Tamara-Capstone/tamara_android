@@ -112,7 +112,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="130dp"
-            android:backgroundTint="@color/md_theme_light_primaryContainer"
+            android:backgroundTint="@color/md_theme_dark_onSecondaryContainer"
             android:clickable="true"
             android:contentDescription="@string/deteksi"
             app:cardCornerRadius="10dp"
@@ -192,18 +192,17 @@
             </RelativeLayout>
 
             <Button
-                android:id="@+id/btn_login"
+                android:id="@+id/btn_analisis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="120dp"
                 android:contentDescription="@string/analisis"
-                android:elevation="3dp"
                 android:fontFamily="@font/poppinsbold"
-                android:shadowColor="@color/cardview_shadow_end_color"
+                style="?attr/materialButtonOutlinedStyle"
+                app:strokeColor="@color/md_theme_light_primary"
                 android:stateListAnimator="@null"
                 android:text="@string/analisisnow"
-                android:translationZ="3dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent" />

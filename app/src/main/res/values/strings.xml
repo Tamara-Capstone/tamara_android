@@ -24,10 +24,15 @@
     <string name="title_profile">Profil</string>
     <string name="cuaca">Cuaca</string>
     <string name="alamat">Alamat</string>
-    <string name="derajat">0 derajat celcius</string>
+    <string name="derajat">28</string>
+    <string name="derajatdetail">\u2103elcius</string>
     <string name="saran_kegiatan">Saran Kegiatan</string>
     <string name="deteksi">Deteksi Tanaman</string>
     <string name="takepicture">Ambil Foto</string>
     <string name="analisis">Analisis Produktivitas</string>
     <string name="analisisnow">Analisis Sekarang</string>
+    <string name="alamatdetail">Kecamatan Medan Kota, 15 Mei</string>
+    <string name="saran_kegiatandetail">Hujan di pagi hari, berawan di sore hari. Kemungkinan, hari ini <b>buruk untuk pemberian pestisida</b> </string>
+    <string name="ramalan">Ramalan 3 Hari</string>
+    <string name="hari">Selasa</string>
 </resources>

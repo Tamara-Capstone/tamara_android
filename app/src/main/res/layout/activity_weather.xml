@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_theme_light_background"
+    tools:context=".WeatherActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="412dp"
+        android:layout_height="130dp"
+        android:backgroundTint="@color/md_theme_dark_onSecondaryContainer"
+        android:clickable="true"
+        android:contentDescription="@string/cuaca"
+        app:cardElevation="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="130dp"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/alamat"
+                    android:layout_width="284dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="@string/alamatdetail"
+                    android:textSize="12dp"
+                    tools:ignore="TextSizeCheck" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/derajatdetail"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="@string/derajat"
+                        android:textSize="20dp"
+                        tools:ignore="TextSizeCheck" />
+
+                    <TextView
+                        android:id="@+id/derajat"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="@string/derajatdetail"
+                        android:textSize="20dp"
+                        tools:ignore="TextSizeCheck" />
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/saran"
+                    android:layout_width="289dp"
+                    android:layout_height="62dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="@string/saran_kegiatandetail"
+                    android:textSize="12dp"
+                    tools:ignore="TextSizeCheck" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgCuaca"
+                android:layout_width="65dp"
+                android:paddingRight="15dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_cloud" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <!-- End Cuaca-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingTop="150dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="168dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="350dp"
+            android:layout_height="250dp"
+            android:backgroundTint="@color/cardview_light_background"
+            android:elevation="3dp"
+            android:translationZ="3dp"
+            android:stateListAnimator="@null"
+            android:clickable="true"
+            android:contentDescription="@string/ramalan"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="1dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="500dp"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="30dp">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_calender" />
+
+                    <TextView
+                        android:id="@+id/ramalan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
+                        android:paddingTop="5dp"
+                        android:paddingLeft="5dp"
+                        android:text="@string/ramalan"
+                        android:textSize="10dp"
+                        tools:ignore="TextSizeCheck" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="5dp"
+                    android:orientation="horizontal"
+                    android:paddingTop="2dp"
+                    android:paddingLeft="30dp">
+
+                    <View
+                        android:layout_width="300dp"
+                        android:layout_height="1dp"
+                        android:background="#D3D3D3"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/hari1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:text="@string/hari"
+                            android:textSize="12dp"
+                            tools:ignore="TextSizeCheck" />
+
+                        <ImageView
+                            android:id="@+id/cloud1"
+                            android:layout_width="165dp"
+                            android:layout_height="25dp"
+                            android:paddingLeft="40dp"
+                            android:src="@drawable/ic_sun" />
+
+                        <TextView
+                            android:id="@+id/derajat1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="@string/derajat"
+                            android:textSize="12dp"
+                            tools:ignore="TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/derajat2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="@string/derajatdetail"
+                            android:textSize="12dp"
+                            tools:ignore="TextSizeCheck" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="320dp"
+                        android:layout_height="5dp"
+                        android:orientation="horizontal"
+                        android:paddingTop="2dp"
+                        android:paddingLeft="30dp">
+
+                        <View
+                            android:layout_width="300dp"
+                            android:layout_height="1dp"
+                            android:background="#D3D3D3"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/hari2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:text="@string/hari"
+                            android:textSize="12dp"
+                            tools:ignore="TextSizeCheck" />
+
+                        <ImageView
+                            android:id="@+id/cloud2"
+                            android:layout_width="165dp"
+                            android:layout_height="25dp"
+                            android:paddingLeft="40dp"
+                            android:src="@drawable/ic_ran" />
+
+                        <TextView
+                            android:id="@+id/derajat3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="@string/derajat"
+                            android:textSize="12dp"
+                            tools:ignore="TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/derajat4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="@string/derajatdetail"
+                            android:textSize="12dp"
+                            tools:ignore="TextSizeCheck" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="320dp"
+                        android:layout_height="5dp"
+                        android:orientation="horizontal"
+                        android:paddingTop="2dp"
+                        android:paddingLeft="30dp">
+
+                        <View
+                            android:layout_width="300dp"
+                            android:layout_height="1dp"
+                            android:background="#D3D3D3"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/hari3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:text="@string/hari"
+                            android:textSize="12dp"
+                            tools:ignore="TextSizeCheck" />
+
+                        <ImageView
+                            android:id="@+id/cloud3"
+                            android:layout_width="165dp"
+                            android:layout_height="25dp"
+                            android:paddingLeft="40dp"
+                            android:src="@drawable/ic_cloud1" />
+
+                        <TextView
+                            android:id="@+id/derajat5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="@string/derajat"
+                            android:textSize="12dp"
+                            tools:ignore="TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/derajat6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:text="@string/derajatdetail"
+                            android:textSize="12dp"
+                            tools:ignore="TextSizeCheck" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
