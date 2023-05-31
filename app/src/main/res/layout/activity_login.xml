@@ -125,15 +125,15 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="76dp"
+        android:elevation="3dp"
         android:fontFamily="@font/poppinsbold"
         android:shadowColor="@color/cardview_shadow_end_color"
         android:stateListAnimator="@null"
-        android:elevation="3dp"
-        android:translationZ="3dp"
         android:text="@string/daftar"
-        app:strokeColor="@color/md_theme_light_primary"
+        android:translationZ="3dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordTextLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordTextLayout"
+        app:strokeColor="@color/md_theme_light_primary" />
 </androidx.constraintlayout.widget.ConstraintLayout>

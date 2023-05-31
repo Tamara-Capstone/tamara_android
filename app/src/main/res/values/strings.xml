@@ -56,4 +56,9 @@
     <string name="pilih_kategori_tanaman">Pilih Kategori Tanaman</string>
     <string name="judul_pertanyaan_new">Judul Pertanyaan</string>
     <string name="hint_edit_text_judulpertanyaan">Tulis pertanyaan disini yang menunjukkan apa yang terjadi dengan tanaman Anda</string>
+    <string name="maks_200_karakter">Maks. 200 karakter</string>
+    <string name="deskripsi_permasalahan">Deskripsi Permasalahan</string>
+    <string name="maks_2000_karakter">Maks. 2000 karakter</string>
+    <string name="hint_edit_text_deskripsipertanyaan">Jelaskan permasalahan pada tanaman secara detail disini seperti perubahan pada daun, dan lain-lain</string>
+    <string name="kirim">Kirim</string>
 </resources>
