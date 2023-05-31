@@ -30,4 +30,8 @@
     </style>
 
     <style name="Theme.Tamara_android" parent="Base.Theme.Tamara_android" />
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:fontFamily">@font/poppinssemibold</item>
+    </style>
 </resources>
