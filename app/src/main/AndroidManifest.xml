@@ -14,6 +14,9 @@
         android:theme="@style/Theme.Tamara_android"
         tools:targetApi="31">
         <activity
+            android:name=".AskCommunityActivity"
+            android:exported="false" />
+        <activity
             android:name=".DetailScanAcitivity"
             android:exported="false" />
         <activity
@@ -43,7 +46,7 @@
         </activity>
         <activity
             android:name=".SplashActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />

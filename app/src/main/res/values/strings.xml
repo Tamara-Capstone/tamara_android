@@ -40,7 +40,7 @@
     <string name="detail">Detail</string>
     <string name="title_hasilanalisis">Hasil Analisis</string>
     <string name="user">User</string>
-    <string name="hasilanalisis">\u2022 Perkembangan yang tidak normal pada daun, tunas, dan bunga. <br/> \n\u2022 Penampilan yang rimbun. <br/> \n\u2022 Pertumbuhan yang terhambat. <br/>\n\u2022 Gangguan tersebar luas pada bunga dan tunas vegetatif.</string>
+    <string name="hasilanalisis">\u2022 Perkembangan yang tidak normal pada daun, tunas, dan bunga. <br /> \n\u2022 Penampilan yang rimbun. <br /> \n\u2022 Pertumbuhan yang terhambat. <br />\n\u2022 Gangguan tersebar luas pada bunga dan tunas vegetatif.</string>
     <string name="penjelasanalisis">Penyakit ini disebabkan oleh spesies jamur Fusarium mangiferae. Malformasi vegetatif umumnya ditemukan pada bibit muda. Bibit menghasilkan pucuk kecil dengan daun bersisik kecil, membuatnya tampak seperti tandan di pucuk pucuk. Bibit tetap kerdil dan akhirnya mati. Variasi malai dapat dilihat pada malformasi perbungaan.</string>
     <string name="user">User</string>
     <string name="satu">1</string>
@@ -52,4 +52,8 @@
     <string name="komunitas">Komunitas</string>
     <string name="jawaban"> Jawaban</string>
     <string name="keluar">Keluar</string>
+    <string name="tanya_komunitas">Tanya Komunitas</string>
+    <string name="pilih_kategori_tanaman">Pilih Kategori Tanaman</string>
+    <string name="judul_pertanyaan_new">Judul Pertanyaan</string>
+    <string name="hint_edit_text_judulpertanyaan">Tulis pertanyaan disini yang menunjukkan apa yang terjadi dengan tanaman Anda</string>
 </resources>
