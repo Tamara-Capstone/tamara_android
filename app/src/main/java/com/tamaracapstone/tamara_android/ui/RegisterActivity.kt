@@ -1,28 +1,31 @@
-package com.tamaracapstone.tamara_android
+package com.tamaracapstone.tamara_android.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
-import com.tamaracapstone.tamara_android.databinding.ActivityLoginBinding
+import com.tamaracapstone.tamara_android.R
+import com.tamaracapstone.tamara_android.databinding.ActivityRegisterBinding
 
-class LoginActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityLoginBinding
+class RegisterActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityRegisterBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityLoginBinding.inflate(layoutInflater)
+        binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
         emailFocusListener()
         passwordFocusListener()
+        nameFocusListener()
 
-        binding.btnLogin.setOnClickListener { submitForm() }
+        binding.btnDaftar.setOnClickListener { submitForm() }
     }
 
     private fun submitForm() {
+        val validName = binding.nameTextLayout.helperText == null
         val validEmail = binding.emailTextLayout.helperText == null
         val validPassword = binding.passwordTextLayout.helperText == null
 
-        if (validEmail && validPassword)
+        if (validEmail && validPassword && validName)
             resetForm() //nnti ganti ke pindah activity home
         else
             invalidForm()
@@ -30,19 +33,38 @@ class LoginActivity : AppCompatActivity() {
 
     private fun invalidForm() {
         var message = ""
+        if(binding.nameTextLayout.helperText == null)
+            message += "\n\nEmail: " + binding.nameTextLayout.helperText
         if(binding.emailTextLayout.helperText == null)
             message += "\n\nEmail: " + binding.emailTextLayout.helperText
         if(binding.passwordTextLayout.helperText == null)
             message += "\n\nPassword: " + binding.passwordTextLayout.helperText
 
         Toast.makeText(
-            this@LoginActivity, getString(R.string.invalid_form), Toast.LENGTH_SHORT
+            this@RegisterActivity, getString(R.string.invalid_form), Toast.LENGTH_SHORT
         ).show()
     }
 
     private fun resetForm() {
-        var message = "Email: " + binding.emailEditTextLogin.text
+        var message = "Name: " + binding.nameEditTextLogin.text
+        message += "\nEmail: " + binding.emailEditTextLogin.text
         message += "\nPassword: " + binding.passwordEditTextLogin.text
+    }
+
+    private fun nameFocusListener() {
+        binding.nameEditTextLogin.setOnFocusChangeListener {_, focused ->
+            if(!focused) {
+                binding.nameTextLayout.helperText = validName()
+            }
+        }
+    }
+
+    private fun validName(): String? {
+        val nameText = binding.nameEditTextLogin.text.toString()
+        if (nameText.length < 3) {
+            return getString(R.string.panjang_nama)
+        }
+        return null
     }
 
     private fun emailFocusListener() {

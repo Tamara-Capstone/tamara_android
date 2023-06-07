@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AskCommunityActivity">
+    tools:context=".ui.AskCommunityActivity">
 
     <LinearLayout
         android:id="@+id/linear_layout_tanya_komunitas"
@@ -63,7 +63,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
-
 
     <ImageView
         android:id="@+id/iv_poto_tanaman"

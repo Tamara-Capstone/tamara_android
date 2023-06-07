@@ -61,4 +61,5 @@
     <string name="maks_2000_karakter">Maks. 2000 karakter</string>
     <string name="hint_edit_text_deskripsipertanyaan">Jelaskan permasalahan pada tanaman secara detail disini seperti perubahan pada daun, dan lain-lain</string>
     <string name="kirim">Kirim</string>
+    <string name="ini_adalah_jawaban">Ini adalah jawaban</string>
 </resources>
