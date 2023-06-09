@@ -2,7 +2,7 @@ package com.tamaracapstone.tamara_android.data.source.remote
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
-import de.hdodenhof.circleimageview.BuildConfig
+import com.tamaracapstone.tamara_android.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
