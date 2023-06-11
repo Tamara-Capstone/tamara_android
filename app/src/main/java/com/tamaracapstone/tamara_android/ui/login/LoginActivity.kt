@@ -1,23 +1,72 @@
-package com.tamaracapstone.tamara_android.ui
+package com.tamaracapstone.tamara_android.ui.login
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
+import androidx.activity.viewModels
+import com.tamaracapstone.tamara_android.Locator
 import com.tamaracapstone.tamara_android.R
 import com.tamaracapstone.tamara_android.databinding.ActivityLoginBinding
+import com.tamaracapstone.tamara_android.ui.register.RegisterActivity
+import com.tamaracapstone.tamara_android.ui.dashboard.DashboardActivity
+import com.tamaracapstone.tamara_android.utils.ResultState
+import com.tamaracapstone.tamara_android.utils.launchAndCollectIn
 
 class LoginActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityLoginBinding
+    private val binding by lazy { ActivityLoginBinding.inflate(layoutInflater) }
+    private val viewModel by viewModels<LoginViewModel>(factoryProducer = { Locator.loginViewModelFactory })
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         emailFocusListener()
         passwordFocusListener()
 
         binding.btnLogin.setOnClickListener { submitForm() }
+
+        viewModel.loginState.launchAndCollectIn(this) { state ->
+            when (state.resultVerifyUser) {
+                is ResultState.Success<String> -> {
+//                    binding.btnLogin.setLoading(false)
+                    startActivity(
+                        Intent(
+                            this@LoginActivity, DashboardActivity::class.java
+                        )
+                    )
+                    finish()
+                }
+//                is ResultState.Loading -> binding.btnLogin.setLoading(true)
+                is ResultState.Error -> {
+//                    binding.btnLogin.setLoading(false)
+                    Toast.makeText(
+                        this@LoginActivity, state.resultVerifyUser.message, Toast.LENGTH_SHORT
+                    ).show()
+                }
+                else -> Unit
+            }
+
+        }
+
+        binding.btnLogin.setOnClickListener {
+            viewModel.doLogin(
+                email = binding.emailEditTextLogin.text.toString(),
+                password = binding.passwordEditTextLogin.text.toString()
+            )
+        }
+
+        binding.textDontHaveAcc.setOnClickListener {
+            startActivity(
+                Intent(
+                    this, RegisterActivity::class.java
+                )
+            )
+        }
+
     }
+
+
 
     private fun submitForm() {
         val validEmail = binding.emailTextLayout.helperText == null

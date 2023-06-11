@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/md_theme_light_background"
-    tools:context=".ui.RegisterActivity">
+    tools:context=".ui.register.RegisterActivity">
 
     <ImageView
         android:id="@+id/imgLogo"
@@ -62,7 +62,7 @@
         app:startIconDrawable="@drawable/ic_person">
 
         <EditText
-            android:id="@+id/name_edit_text_login"
+            android:id="@+id/name_edit_text_register"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/edit_text"
@@ -90,7 +90,7 @@
         app:startIconDrawable="@drawable/ic_email">
 
         <EditText
-            android:id="@+id/email_edit_text_login"
+            android:id="@+id/email_edit_text_register"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/edit_text"
@@ -120,7 +120,7 @@
         app:startIconDrawable="@drawable/ic_lock">
 
         <EditText
-            android:id="@+id/password_edit_text_login"
+            android:id="@+id/password_edit_text_register"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/edit_text"

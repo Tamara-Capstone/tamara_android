@@ -1,12 +1,12 @@
-package com.tamaracapstone.tamara_android.ui
+package com.tamaracapstone.tamara_android.ui.dashboard
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.tamaracapstone.tamara_android.R
 
-class SplashActivity : AppCompatActivity() {
+class DashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+        setContentView(R.layout.activity_dashboard)
     }
 }
