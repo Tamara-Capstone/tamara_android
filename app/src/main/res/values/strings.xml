@@ -39,14 +39,12 @@
     <string name="number">1</string>
     <string name="detail">Detail</string>
     <string name="title_hasilanalisis">Hasil Analisis</string>
-    <string name="user">User</string>
     <string name="hasilanalisis">\u2022 Perkembangan yang tidak normal pada daun, tunas, dan bunga. <br /> \n\u2022 Penampilan yang rimbun. <br /> \n\u2022 Pertumbuhan yang terhambat. <br />\n\u2022 Gangguan tersebar luas pada bunga dan tunas vegetatif.</string>
     <string name="penjelasanalisis">Penyakit ini disebabkan oleh spesies jamur Fusarium mangiferae. Malformasi vegetatif umumnya ditemukan pada bibit muda. Bibit menghasilkan pucuk kecil dengan daun bersisik kecil, membuatnya tampak seperti tandan di pucuk pucuk. Bibit tetap kerdil dan akhirnya mati. Variasi malai dapat dilihat pada malformasi perbungaan.</string>
     <string name="user">User</string>
     <string name="satu">1</string>
     <string name="sat_waktu"> Jam</string>
     <string name="dot">•</string>
-    <string name="nama_tanaman">Nama Tanaman</string>
     <string name="judul_pertanyaan">Ini adalah judul pertanyaan.</string>
     <string name="pertanyaan">Ini adalah pertanyaan.</string>
     <string name="komunitas">Komunitas</string>
@@ -62,4 +60,7 @@
     <string name="hint_edit_text_deskripsipertanyaan">Jelaskan permasalahan pada tanaman secara detail disini seperti perubahan pada daun, dan lain-lain</string>
     <string name="kirim">Kirim</string>
     <string name="ini_adalah_jawaban">Ini adalah jawaban</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="community">Segera launching fitur komunitas</string>
 </resources>

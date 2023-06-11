@@ -7,7 +7,7 @@
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/communty"
+        android:id="@+id/community"
         android:icon="@drawable/ic_community"
         android:title="@string/title_community" />
 
