@@ -12,8 +12,8 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 class SplashViewModel(private val getUserUseCase: GetUserUseCase) : ViewModel() {
-    private val _welcomeState = MutableStateFlow(WelcomeViewState())
-    val welcomeState = _welcomeState.asStateFlow()
+    private val _splashState = MutableStateFlow(SplashViewState())
+    val splashState = _splashState.asStateFlow()
 
     init {
         getIsLoggedIn()
@@ -23,7 +23,7 @@ class SplashViewModel(private val getUserUseCase: GetUserUseCase) : ViewModel() 
         viewModelScope.launch {
             getUserUseCase().collect { user ->
                 delay(3000)
-                _welcomeState.update {
+                _splashState.update {
                     it.copy(resultIsLoggedIn = ResultState.Success(user.token.isNotEmpty()))
                 }
             }

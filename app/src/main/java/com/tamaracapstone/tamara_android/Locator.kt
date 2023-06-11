@@ -35,7 +35,7 @@ object Locator {
         get() = RegisterViewModel.Factory(
             registerUseCase = registerUseCase
         )
-    val welcomeViewModelFactory
+    val splashViewModelFactory
         get() = SplashViewModel.Factory(
             getUserUseCase = getUserUseCase
         )
