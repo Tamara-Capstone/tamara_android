@@ -24,7 +24,7 @@ class LoginActivity : AppCompatActivity() {
         emailFocusListener()
         passwordFocusListener()
 
-        binding.btnLogin.setOnClickListener { submitForm() }
+
 
         viewModel.loginState.launchAndCollectIn(this) { state ->
             when (state.resultVerifyUser) {
@@ -44,17 +44,20 @@ class LoginActivity : AppCompatActivity() {
                         this@LoginActivity, state.resultVerifyUser.message, Toast.LENGTH_SHORT
                     ).show()
                 }
+
                 else -> Unit
             }
 
         }
 
-        binding.btnLogin.setOnClickListener {
-            viewModel.doLogin(
-                email = binding.emailEditTextLogin.text.toString(),
-                password = binding.passwordEditTextLogin.text.toString()
-            )
-        }
+        binding.btnLogin.setOnClickListener { submitForm() }
+
+//        binding.btnLogin.setOnClickListener {
+//            viewModel.doLogin(
+//                email = binding.emailEditTextLogin.text.toString(),
+//                password = binding.passwordEditTextLogin.text.toString()
+//            )
+//        }
 
         binding.textDontHaveAcc.setOnClickListener {
             startActivity(
@@ -67,22 +70,25 @@ class LoginActivity : AppCompatActivity() {
     }
 
 
-
     private fun submitForm() {
         val validEmail = binding.emailTextLayout.helperText == null
         val validPassword = binding.passwordTextLayout.helperText == null
 
         if (validEmail && validPassword)
-            resetForm() //nnti ganti ke pindah activity home
+            viewModel.doLogin(
+                email = binding.emailEditTextLogin.text.toString(),
+                password = binding.passwordEditTextLogin.text.toString()
+            )
+//            resetForm() //nnti ganti ke pindah activity home
         else
-            invalidForm()
+        invalidForm()
     }
 
     private fun invalidForm() {
         var message = ""
-        if(binding.emailTextLayout.helperText == null)
+        if (binding.emailTextLayout.helperText == null)
             message += "\n\nEmail: " + binding.emailTextLayout.helperText
-        if(binding.passwordTextLayout.helperText == null)
+        if (binding.passwordTextLayout.helperText == null)
             message += "\n\nPassword: " + binding.passwordTextLayout.helperText
 
         Toast.makeText(
@@ -96,8 +102,8 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun emailFocusListener() {
-        binding.emailEditTextLogin.setOnFocusChangeListener {_, focused ->
-            if(!focused) {
+        binding.emailEditTextLogin.setOnFocusChangeListener { _, focused ->
+            if (!focused) {
                 binding.emailTextLayout.helperText = validEmail()
             }
         }
@@ -112,8 +118,8 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun passwordFocusListener() {
-        binding.passwordEditTextLogin.setOnFocusChangeListener {_, focused ->
-            if(!focused) {
+        binding.passwordEditTextLogin.setOnFocusChangeListener { _, focused ->
+            if (!focused) {
                 binding.passwordTextLayout.helperText = validPassword()
             }
         }

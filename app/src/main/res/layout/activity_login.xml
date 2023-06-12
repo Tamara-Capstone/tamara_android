@@ -129,7 +129,7 @@
         android:fontFamily="@font/poppinsbold"
         android:shadowColor="@color/cardview_shadow_end_color"
         android:stateListAnimator="@null"
-        android:text="@string/daftar"
+        android:text="@string/login"
         android:translationZ="3dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
