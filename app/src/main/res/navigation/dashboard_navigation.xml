@@ -10,4 +10,9 @@
         android:name="com.tamaracapstone.tamara_android.ui.dashboard.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/community2"
+        android:name="com.tamaracapstone.tamara_android.ui.Community"
+        android:label="fragment_community"
+        tools:layout="@layout/fragment_community" />
 </navigation>

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
+import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import com.tamaracapstone.tamara_android.Locator
@@ -42,9 +43,9 @@ class RegisterActivity : AppCompatActivity() {
                     )
                     finish()
                 }
-//                is ResultState.Loading -> binding.btnDaftar.setLoading(true)
+                is ResultState.Loading -> binding.loadingRegister.visibility = View.VISIBLE
                 is ResultState.Error -> {
-//                    binding.btnDaftar.setLoading(false)
+                    binding.loadingRegister.visibility = View.GONE
                     Toast.makeText(
                         this@RegisterActivity, it.resultRegisterUser.message, Toast.LENGTH_SHORT
                     ).show()
@@ -75,7 +76,7 @@ class RegisterActivity : AppCompatActivity() {
         val validPassword = binding.passwordTextLayout.helperText == null
 
         if (validEmail && validPassword && validName)
-            resetForm() //nnti ganti ke pindah activity home
+            resetForm()
         else
             invalidForm()
     }
