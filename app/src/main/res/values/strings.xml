@@ -26,7 +26,8 @@
     <string name="alamat">Alamat</string>
     <string name="derajatdetail">\u2103elcius</string>
     <string name="saran_kegiatan">Saran Kegiatan</string>
-    <string name="deteksi">Deteksi Tanaman</string>
+    <string name="scan_tanaman">Scan Tanaman</string>
+    <string name="scan">Scan</string>
     <string name="takepicture">Ambil Foto</string>
     <string name="analisis">Analisis Produktivitas</string>
     <string name="analisisnow">Analisis Sekarang</string>
@@ -73,4 +74,7 @@
 
     <string name="daftar_berhasil">Pendaftaran berhasil</string>
     <string name="tv_saran_kegiatan">Baik untuk memberi pupuk pada tanaman.</string>
+    <string name="galeri">GALERI</string>
+    <string name="kamera">KAMERA</string>
+    <string name="proses">PROSES</string>
 </resources>

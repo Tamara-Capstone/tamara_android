@@ -24,4 +24,5 @@ class AuthenticationInterceptor(private val dataStore: DataStore<Preferences>) :
             chain.proceed(original)
         }
     }
+
 }

@@ -3,6 +3,7 @@ package com.tamaracapstone.tamara_android.ui.register
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import com.tamaracapstone.tamara_android.domain.contract.RegisterUseCaseContract
 import com.tamaracapstone.tamara_android.domain.usecase.RegisterUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -11,7 +12,7 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.update
 
 class RegisterViewModel(
-    private val registerUseCase: RegisterUseCase
+    private val registerUseCase: RegisterUseCaseContract
 ) : ViewModel() {
     private val _registerViewState = MutableStateFlow(RegisterViewState())
     val registerViewState = _registerViewState.asStateFlow()

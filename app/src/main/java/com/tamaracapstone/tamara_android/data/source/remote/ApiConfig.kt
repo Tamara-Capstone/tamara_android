@@ -9,6 +9,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiConfig(private val dataStore: DataStore<Preferences>) {
+
     private fun getRetrofit(): Retrofit {
         return Retrofit.Builder().baseUrl(BuildConfig.BASE_URL).client(
             OkHttpClient.Builder().addInterceptor(
@@ -18,4 +19,5 @@ class ApiConfig(private val dataStore: DataStore<Preferences>) {
     }
 
     val apiService: ApiService = getRetrofit().create(ApiService::class.java)
+
 }
