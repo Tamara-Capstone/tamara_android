@@ -1,212 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.dashboard.home.HomeFragment">
 
-    <LinearLayout
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Start Cuaca-->
-        <RelativeLayout
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp">
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/app_name"
+            app:titleTextAppearance="@style/Toolbar.TitleText" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cuaca"
-                    android:textSize="16dp"
-                    android:fontFamily="@font/poppinssemibold"/>
-            </LinearLayout>
-        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="85dp"
-            android:backgroundTint="@color/cardview_light_background"
-            android:clickable="true"
-            android:contentDescription="@string/cuaca"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="1dp">
+    <TextView
+        android:id="@+id/tvCuaca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="@string/cuaca"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+    <include
+        android:id="@+id/item_cuaca_home"
+        layout="@layout/item_card_cuaca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCuaca" />
 
-                <LinearLayout
-                    android:layout_width="300dp"
-                    android:layout_height="85dp"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+    <TextView
+        android:id="@+id/tv_scan_tanaman"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="@string/deteksi"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_cuaca_home" />
 
-                    <TextView
-                        android:id="@+id/alamat"
-                        android:layout_width="284dp"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppinsregular"
-                        android:text="@string/alamat"
-                        android:textSize="10dp"
-                        tools:ignore="TextSizeCheck" />
+    <include
+        android:id="@+id/item_scan_tanaman_home"
+        layout="@layout/item_card_scan_tanaman"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_scan_tanaman" />
 
-                    <TextView
-                        android:id="@+id/derajat"
-                        android:layout_width="289dp"
-                        android:layout_height="30dp"
-                        android:fontFamily="@font/poppinsregular"
-                        android:text="@string/derajat"
-                        android:textSize="20dp"
-                        tools:ignore="TextSizeCheck" />
+    <TextView
+        android:id="@+id/tv_analisis_produktivitas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="@string/analisis"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_scan_tanaman_home" />
 
-                    <TextView
-                        android:id="@+id/saran"
-                        android:layout_width="289dp"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppinsregular"
-                        android:text="@string/saran_kegiatan"
-                        android:textSize="12dp"
-                        tools:ignore="TextSizeCheck" />
-                </LinearLayout>
+    <include
+        android:id="@+id/item_analisis_produktivitas"
+        layout="@layout/item_card_analisis_produktivitas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_analisis_produktivitas" />
 
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="60dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/ic_cloud"
-                    android:id="@+id/imgCuaca"/>
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-        <!-- End Cuaca-->
-
-        <!--Start Deteksi-->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/deteksi"
-                    android:textSize="16dp"
-                    android:fontFamily="@font/poppinssemibold"/>
-            </LinearLayout>
-        </RelativeLayout>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="130dp"
-            android:backgroundTint="@color/md_theme_dark_onSecondaryContainer"
-            android:clickable="true"
-            android:contentDescription="@string/deteksi"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="1dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/imgDeteksi"
-                    android:layout_width="800dp"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/ic_groupdeteksi" />
-
-            </RelativeLayout>
-
-            <Button
-                android:id="@+id/btn_takepicture"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="76dp"
-                android:contentDescription="@string/deteksi"
-                android:elevation="3dp"
-                android:fontFamily="@font/poppinsbold"
-                android:shadowColor="@color/cardview_shadow_end_color"
-                android:stateListAnimator="@null"
-                android:text="@string/takepicture"
-                android:translationZ="3dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent" />
-        </androidx.cardview.widget.CardView>
-        <!--End Deteksi-->
-
-        <!--Start Analisis-->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/analisis"
-                    android:textSize="16dp"
-                    android:fontFamily="@font/poppinssemibold"/>
-            </LinearLayout>
-        </RelativeLayout>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:backgroundTint="@color/cardview_light_background"
-            android:clickable="true"
-            android:contentDescription="@string/analisis"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="1dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/imgAnalisis"
-                    android:layout_width="800dp"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/ic_analisis" />
-
-            </RelativeLayout>
-
-            <Button
-                android:id="@+id/btn_analisis"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="120dp"
-                android:contentDescription="@string/analisis"
-                android:fontFamily="@font/poppinsbold"
-                style="?attr/materialButtonOutlinedStyle"
-                app:strokeColor="@color/md_theme_light_primary"
-                android:stateListAnimator="@null"
-                android:text="@string/analisisnow"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent" />
-        </androidx.cardview.widget.CardView>
-        <!--End Analisis-->
-    </LinearLayout>
-
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

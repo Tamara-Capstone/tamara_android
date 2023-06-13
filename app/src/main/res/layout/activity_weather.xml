@@ -7,13 +7,13 @@
     android:background="@color/md_theme_light_background"
     tools:context=".ui.WeatherActivity">
 
-
     <androidx.cardview.widget.CardView
         android:layout_width="412dp"
         android:layout_height="130dp"
         android:backgroundTint="@color/md_theme_dark_onSecondaryContainer"
         android:clickable="true"
         android:contentDescription="@string/cuaca"
+        android:focusable="true"
         app:cardElevation="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
@@ -38,6 +38,7 @@
                     android:text="@string/alamatdetail"
                     android:textSize="12sp"
                     tools:ignore="TextSizeCheck" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
@@ -62,6 +63,7 @@
                         tools:ignore="TextSizeCheck" />
 
                 </LinearLayout>
+
                 <TextView
                     android:id="@+id/saran"
                     android:layout_width="289dp"
@@ -75,13 +77,12 @@
             <ImageView
                 android:id="@+id/imgCuaca"
                 android:layout_width="65dp"
-                android:paddingRight="15dp"
                 android:layout_height="60dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerInParent="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/ic_cloud"
-                android:contentDescription="imgCloud"/>
+                android:contentDescription="imgCloud"
+                android:paddingEnd="15dp"
+                android:src="@drawable/ic_cloudy" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
     <!-- End Cuaca-->
@@ -99,11 +100,11 @@
             android:layout_width="350dp"
             android:layout_height="250dp"
             android:backgroundTint="@color/cardview_light_background"
-            android:elevation="3dp"
-            android:translationZ="3dp"
-            android:stateListAnimator="@null"
             android:clickable="true"
             android:contentDescription="@string/ramalan"
+            android:elevation="3dp"
+            android:stateListAnimator="@null"
+            android:translationZ="3dp"
             app:cardCornerRadius="10dp"
             app:cardElevation="1dp">
 
@@ -115,43 +116,45 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="200dp"
-                    android:layout_height="35dp"
-                    android:orientation="horizontal"
-                    android:paddingTop="5dp"
-                    android:paddingLeft="30dp">
 
-                    <ImageView
-                        android:layout_width="15dp"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_calender"
-                        android:contentDescription="imgCalender"/>
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="5dp">
 
-                    <TextView
-                        android:id="@+id/ramalan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppinsregular"
-                        android:paddingTop="5dp"
-                        android:paddingLeft="5dp"
-                        android:text="@string/ramalan"
-                        android:textSize="10dp"
-                        tools:ignore="TextSizeCheck" />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="320dp"
-                    android:layout_height="5dp"
-                    android:orientation="horizontal"
-                    android:paddingTop="2dp"
-                    android:paddingLeft="30dp">
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="imgCalender"
+                            android:src="@drawable/ic_calender" />
 
-                    <View
-                        android:layout_width="300dp"
-                        android:layout_height="1dp"
-                        android:background="#D3D3D3"
-                        android:visibility="visible" />
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/ramalan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
+                            android:text="@string/ramalan"
+                            android:textSize="10dp"
+                            tools:ignore="TextSizeCheck" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="320dp"
+                        android:layout_height="5dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="2dp">
+
+                        <View
+                            android:layout_width="300dp"
+                            android:layout_height="1dp"
+                            android:background="#D3D3D3"
+                            android:visibility="visible" />
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -175,7 +178,7 @@
                             android:layout_width="165dp"
                             android:layout_height="25dp"
                             android:paddingLeft="40dp"
-                            android:src="@drawable/ic_sun" />
+                            android:src="@drawable/ic_cloudy"/>
 
                         <TextView
                             android:id="@+id/derajat1"
@@ -195,12 +198,13 @@
                             android:textSize="12dp"
                             tools:ignore="TextSizeCheck" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="320dp"
                         android:layout_height="5dp"
                         android:orientation="horizontal"
-                        android:paddingTop="2dp"
-                        android:paddingLeft="30dp">
+                        android:paddingLeft="30dp"
+                        android:paddingTop="2dp">
 
                         <View
                             android:layout_width="300dp"
@@ -208,6 +212,7 @@
                             android:background="#D3D3D3"
                             android:visibility="visible" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="65dp"
@@ -230,7 +235,7 @@
                             android:layout_width="165dp"
                             android:layout_height="25dp"
                             android:paddingLeft="40dp"
-                            android:src="@drawable/ic_ran" />
+                            android:src="@drawable/ic_suny"/>
 
                         <TextView
                             android:id="@+id/derajat3"
@@ -250,12 +255,13 @@
                             android:textSize="12dp"
                             tools:ignore="TextSizeCheck" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="320dp"
                         android:layout_height="5dp"
                         android:orientation="horizontal"
-                        android:paddingTop="2dp"
-                        android:paddingLeft="30dp">
+                        android:paddingLeft="30dp"
+                        android:paddingTop="2dp">
 
                         <View
                             android:layout_width="300dp"
@@ -263,6 +269,7 @@
                             android:background="#D3D3D3"
                             android:visibility="visible" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="65dp"
@@ -285,7 +292,7 @@
                             android:layout_width="165dp"
                             android:layout_height="25dp"
                             android:paddingLeft="40dp"
-                            android:src="@drawable/ic_cloud1" />
+                            android:src="@drawable/ic_rainy" />
 
                         <TextView
                             android:id="@+id/derajat5"

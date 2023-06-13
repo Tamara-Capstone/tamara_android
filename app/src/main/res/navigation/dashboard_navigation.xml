@@ -11,8 +11,13 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
-        android:id="@+id/community2"
-        android:name="com.tamaracapstone.tamara_android.ui.Community"
+        android:id="@+id/communityFragment"
+        android:name="com.tamaracapstone.tamara_android.ui.dashboard.community.CommunityFragment"
         android:label="fragment_community"
         tools:layout="@layout/fragment_community" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.tamaracapstone.tamara_android.ui.dashboard.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
