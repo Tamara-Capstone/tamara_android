@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="330dp"
+        android:layout_height="675dp"
+        android:backgroundTint="@color/cardview_light_background"
+        android:clickable="true"
+        android:contentDescription="@string/detail"
+        android:elevation="3dp"
+        android:stateListAnimator="@null"
+        android:translationZ="3dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.616">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="16dp"
+                    app:cardCornerRadius="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:backgroundTint="@color/md_theme_dark_inversePrimary">
+
+                    <TextView
+                        android:id="@+id/tv_first_letter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textColor="@color/white"
+                        tools:text="@string/number1" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/titleAnalisis"
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:paddingLeft="8dp"
+                    tools:text="@string/title_hasilanalisis" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/Animation.Design.BottomSheetDialog"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:paddingLeft="22dp"
+                android:paddingTop="2dp"
+                android:paddingRight="22dp"
+                android:text="@string/hasilanalisis" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="141dp"
+                android:paddingLeft="22dp"
+                android:paddingTop="2dp"
+                android:paddingRight="22dp"
+                android:text="@string/penjelasanalisis" />
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="9dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp">
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:background="#D3D3D3"
+                    android:visibility="visible" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view2"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="16dp"
+                    app:cardCornerRadius="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:backgroundTint="@color/md_theme_dark_inversePrimary">
+
+                    <TextView
+                        android:id="@+id/tv_second_letter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textColor="@color/white"
+                        tools:text="@string/number2" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/titleSaran"
+                    android:layout_width="233dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:paddingLeft="8dp"
+                    tools:text="@string/title_saranpengendalian" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/Animation.Design.BottomSheetDialog"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:paddingLeft="22dp"
+                android:paddingTop="2dp"
+                android:paddingRight="22dp"
+                android:text="@string/hasilsaran" />
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="9dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp">
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:background="#D3D3D3"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_eco" />
+
+                <TextView
+                    android:id="@+id/titleOrganik"
+                    android:layout_width="233dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:paddingLeft="5dp"
+                    tools:text="@string/title_pengendalianorganik" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/Animation.Design.BottomSheetDialog"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:paddingLeft="22dp"
+                android:paddingTop="2dp"
+                android:paddingRight="22dp"
+                android:text="@string/pengendalianorganik" />
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="9dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp">
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:background="#D3D3D3"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_kimia" />
+
+                <TextView
+                    android:id="@+id/titleKimia"
+                    android:layout_width="233dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:paddingLeft="8dp"
+                    tools:text="@string/title_pengendaliankimia" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/Animation.Design.BottomSheetDialog"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:paddingLeft="22dp"
+                android:paddingTop="2dp"
+                android:paddingRight="22dp"
+                android:text="@string/pengendaliankimia" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

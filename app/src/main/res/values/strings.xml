@@ -36,7 +36,8 @@
     <string name="ramalan">Ramalan 3 Hari</string>
     <string name="hari">Selasa</string>
     <string name="nama_tanaman">Malformasi Mangga</string>
-    <string name="number">1</string>
+    <string name="number1">1</string>
+    <string name="number2">2</string>
     <string name="detail">Detail</string>
     <string name="title_hasilanalisis">Hasil Analisis</string>
     <string name="hasilanalisis">\u2022 Perkembangan yang tidak normal pada daun, tunas, dan bunga. <br /> \n\u2022 Penampilan yang rimbun. <br /> \n\u2022 Pertumbuhan yang terhambat. <br />\n\u2022 Gangguan tersebar luas pada bunga dan tunas vegetatif.</string>
@@ -60,8 +61,13 @@
     <string name="hint_edit_text_deskripsipertanyaan">Jelaskan permasalahan pada tanaman secara detail disini seperti perubahan pada daun, dan lain-lain</string>
     <string name="kirim">Kirim</string>
     <string name="ini_adalah_jawaban">Ini adalah jawaban</string>
-
+    <string name="title_saranpengendalian">Saran Pengendalian</string>
     <string name="alamat_dummy">Kecamatan Medan Kota</string>
+    <string name="hasilsaran">Kami merekomendasikan mengikuti kontrol organik metode pada tahap awal penyakit atau ketika tanaman mendekati panen. Pada stadium penyakit yang lebih lanjut, harap ikuti langkah-langkah pengendalian kimiawi. Mencampur atau menerapkan produk yang berbeda pada saat yang sama waktu tidak dianjurkan.</string>
+    <string name="title_pengendalianorganik">Pengendalian Organik</string>
+    <string name="pengendalianorganik">Gunakan ekstrak daun Datura stramonium (Alkaloid), Calotropis gigantea dan pohon Mimba (Azadirachtin) untuk mengurangi infeksi.</string>
+    <string name="title_pengendaliankimia">Pengendalian Kimia</string>
+    <string name="pengendaliankimia">Selalu pertimbangkan pendekatan terpadu dengan tindakan pencegahan bersama dengan perawatan biologis, jika tersedia. </string>
     <string name="tanggal_dummy">20 Mei</string>
     <string name="comma">, </string>
     <string name="derajat_celcius">\u2103</string>
