@@ -40,7 +40,9 @@
     <string name="number2">2</string>
     <string name="detail">Detail</string>
     <string name="title_hasilanalisis">Hasil Analisis</string>
+    <string name="title_karakteristik">Karakteristik</string>
     <string name="hasilanalisis">\u2022 Perkembangan yang tidak normal pada daun, tunas, dan bunga. <br /> \n\u2022 Penampilan yang rimbun. <br /> \n\u2022 Pertumbuhan yang terhambat. <br />\n\u2022 Gangguan tersebar luas pada bunga dan tunas vegetatif.</string>
+    <string name="karaktersitk">\u2022 Tumbuhan berwarna hijau tua. <br /> \n\u2022 Daun keras. <br /> \n\u2022 Warna bunga cerah. <br />\n\u2022 Buah berbentuk sempurna, warna buah bagus..</string>
     <string name="penjelasanalisis">Penyakit ini disebabkan oleh spesies jamur Fusarium mangiferae. Malformasi vegetatif umumnya ditemukan pada bibit muda. Bibit menghasilkan pucuk kecil dengan daun bersisik kecil, membuatnya tampak seperti tandan di pucuk pucuk. Bibit tetap kerdil dan akhirnya mati. Variasi malai dapat dilihat pada malformasi perbungaan.</string>
     <string name="user">User</string>
     <string name="satu">1</string>
@@ -68,6 +70,8 @@
     <string name="pengendalianorganik">Gunakan ekstrak daun Datura stramonium (Alkaloid), Calotropis gigantea dan pohon Mimba (Azadirachtin) untuk mengurangi infeksi.</string>
     <string name="title_pengendaliankimia">Pengendalian Kimia</string>
     <string name="pengendaliankimia">Selalu pertimbangkan pendekatan terpadu dengan tindakan pencegahan bersama dengan perawatan biologis, jika tersedia. </string>
+    <string name="hasilscan">Hasil Scan</string>
+    <string name="info">Silahkan cek dari kemungkinan yang di bawah ini yang cocok dengan keadaan tanaman Anda</string>
     <string name="tanggal_dummy">20 Mei</string>
     <string name="comma">, </string>
     <string name="derajat_celcius">\u2103</string>
