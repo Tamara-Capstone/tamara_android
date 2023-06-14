@@ -74,6 +74,7 @@
         app:strokeColor="@color/md_theme_light_primary" />
 
     <Button
+        android:id="@+id/btn_proses"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/proses"
@@ -81,7 +82,7 @@
         android:layout_marginHorizontal="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_gallery" />
+        app:layout_constraintTop_toBottomOf="@+id/plant_spinner" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -89,5 +90,26 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="205dp" />
+
+    <TextView
+        android:id="@+id/tv_kategori_tanaman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="@string/pilih_kategori_tanaman"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_gallery" />
+
+    <Spinner
+        android:id="@+id/plant_spinner"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_kategori_tanaman"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

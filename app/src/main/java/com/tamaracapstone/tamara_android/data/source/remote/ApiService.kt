@@ -1,8 +1,10 @@
 package com.tamaracapstone.tamara_android.data.source.remote
 
 import com.tamaracapstone.tamara_android.data.response.GeneralResponse
+import com.tamaracapstone.tamara_android.data.response.GetUserResponse
 import com.tamaracapstone.tamara_android.data.response.LoginResponse
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface ApiService {
@@ -16,5 +18,8 @@ interface ApiService {
         @Body requestBody: HashMap<String, String>
     ): LoginResponse
 
-
+    @GET("user")
+    suspend fun userDataLogin(
+        @Body requestBody: HashMap<String, String>
+    ): GetUserResponse
 }

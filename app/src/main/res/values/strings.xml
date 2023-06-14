@@ -83,4 +83,19 @@
     <string name="galeri">GALERI</string>
     <string name="kamera">KAMERA</string>
     <string name="proses">PROSES</string>
+
+    <string name="tidak_mendapatkan_akses_kamera"></string>
+
+    <string-array name="plants_array">
+        <item>Singkong</item>
+        <item>Cabai</item>
+        <item>Jagung</item>
+        <item>Jambu</item>
+        <item>Mangga</item>
+        <item>Kentang</item>
+        <item>Teh</item>
+        <item>Tomat</item>
+        <item>Beras</item>
+    </string-array>
+
 </resources>

@@ -8,7 +8,9 @@ import com.tamaracapstone.tamara_android.data.source.local.UserPreferenceImpl
 import com.tamaracapstone.tamara_android.data.source.remote.ApiConfig
 import com.tamaracapstone.tamara_android.domain.usecase.GetUserUseCase
 import com.tamaracapstone.tamara_android.domain.usecase.LoginUseCase
+import com.tamaracapstone.tamara_android.domain.usecase.LogoutUseCase
 import com.tamaracapstone.tamara_android.domain.usecase.RegisterUseCase
+import com.tamaracapstone.tamara_android.ui.dashboard.profile.ProfileViewModel
 import com.tamaracapstone.tamara_android.ui.login.LoginViewModel
 import com.tamaracapstone.tamara_android.ui.register.RegisterViewModel
 import com.tamaracapstone.tamara_android.ui.splash.SplashViewModel
@@ -39,11 +41,17 @@ object Locator {
         get() = SplashViewModel.Factory(
             getUserUseCase = getUserUseCase
         )
+    val profileViewModelFactory
+        get() = ProfileViewModel.Factory(
+            getUserUseCase = getUserUseCase,
+            logoutUseCase = logoutUseCase
+        )
 
     //usecase injection
     private val loginUseCase get() = LoginUseCase(userPreferencesRepository, authRepository)
     private val registerUseCase get() = RegisterUseCase(authRepository)
     private val getUserUseCase get() = GetUserUseCase(userPreferencesRepository)
+    private val logoutUseCase get() = LogoutUseCase(userPreferencesRepository)
 
     //repository injection
     private val userPreferencesRepository by lazy {
