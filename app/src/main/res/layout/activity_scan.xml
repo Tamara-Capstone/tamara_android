@@ -27,8 +27,8 @@
         android:id="@+id/cv_preview_photo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="20dp"
         android:layout_marginTop="8dp"
+        app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/appBarLayout">
@@ -48,10 +48,10 @@
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="136dp"
         android:layout_height="wrap_content"
-        android:text="@string/galeri"
-        android:layout_marginTop="24dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
+        android:text="@string/galeri"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,10 +63,10 @@
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="136dp"
         android:layout_height="wrap_content"
-        android:text="@string/kamera"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginStart="8dp"
+        android:text="@string/kamera"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -77,9 +77,9 @@
         android:id="@+id/btn_proses"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/proses"
-        android:layout_marginTop="24dp"
         android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/proses"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/plant_spinner" />
@@ -95,10 +95,10 @@
         android:id="@+id/tv_kategori_tanaman"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/poppinsmedium"
         android:text="@string/pilih_kategori_tanaman"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_gallery" />
 
@@ -107,9 +107,9 @@
         style="@style/Widget.AppCompat.Spinner.Underlined"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_kategori_tanaman"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_kategori_tanaman" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.analisisproduktifitas.resultanalisis.ResultAnalisisActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/analisis_produktifitas"
+            app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_hasil_analisis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:id="@+id/ic_chart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_chart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_hasil_analisis_pertahun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="@string/hasil_analisis_pertahun"
+                app:layout_constraintBottom_toBottomOf="@+id/ic_chart"
+                app:layout_constraintStart_toEndOf="@id/ic_chart"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/div_heading"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/ic_chart" />
+
+            <TextView
+                android:id="@+id/tv_jumlah_panen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="@string/jumlah_panen"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/div_heading" />
+
+            <TextView
+                android:id="@+id/tv_val_jumlah_panen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="@string/_8"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_jumlah_panen" />
+
+            <TextView
+                android:id="@+id/tv_kg_val_jumlah_panen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="@string/kg"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_val_jumlah_panen"
+                app:layout_constraintStart_toEndOf="@id/tv_val_jumlah_panen"
+                app:layout_constraintTop_toBottomOf="@id/tv_jumlah_panen" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/div_jumlah_panen"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_val_jumlah_panen" />
+
+            <TextView
+                android:id="@+id/tv_produktivitas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="@string/produktifitas"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/div_jumlah_panen" />
+
+            <TextView
+                android:id="@+id/tv_val_produktifitas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="@string/_800"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_produktivitas" />
+
+            <TextView
+                android:id="@+id/tv_kg_val_produktifitas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="@string/kg_ha"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_val_produktifitas"
+                app:layout_constraintStart_toEndOf="@id/tv_val_produktifitas"
+                app:layout_constraintTop_toBottomOf="@+id/tv_produktivitas" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/div_produktifitas"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_val_produktifitas" />
+
+            <TextView
+                android:id="@+id/tv_total_biaya_produksi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="@string/total_biaya_produksi"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/div_produktifitas" />
+
+            <TextView
+                android:id="@+id/tv_rp_val_produktifitas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="@string/rp"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_val_total_biaya_produksi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_val_total_biaya_produksi" />
+
+            <TextView
+                android:id="@+id/tv_val_total_biaya_produksi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="@string/_210000"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@id/tv_rp_val_produktifitas"
+                app:layout_constraintTop_toBottomOf="@+id/tv_total_biaya_produksi" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/div_total_biaya_produksi"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_val_total_biaya_produksi" />
+
+            <TextView
+                android:id="@+id/tv_pendapatan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="@string/pendapatan"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/div_total_biaya_produksi" />
+
+            <TextView
+                android:id="@+id/tv_rp_val_pendapatan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="@string/rp"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_val_pendapatan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_val_pendapatan" />
+
+            <TextView
+                android:id="@+id/tv_val_pendapatan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="@string/_400000"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@id/tv_rp_val_produktifitas"
+                app:layout_constraintTop_toBottomOf="@+id/tv_pendapatan" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/div_pendapatan"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_val_pendapatan" />
+
+            <TextView
+                android:id="@+id/tv_keuntungan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="@string/keuntungan"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/div_pendapatan" />
+
+            <TextView
+                android:id="@+id/tv_rp_val_keuntungan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="@string/rp"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_val_keuntungan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_val_keuntungan" />
+
+            <TextView
+                android:id="@+id/tv_val_keuntungan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="@string/_400000"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@id/tv_rp_val_keuntungan"
+                app:layout_constraintTop_toBottomOf="@+id/tv_keuntungan" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_perbarui_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/perbarui_data"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toBottomOf="@id/card_hasil_analisis"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
