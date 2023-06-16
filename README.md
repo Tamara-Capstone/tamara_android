@@ -53,7 +53,15 @@ This application is implementing MVVM architecture pattern where the view (activ
     cd tandur-android
     ```
 
-2. Run the app in Android Studio from emulator or physical device.
+2. Add your Maps API Key in AndroidManifest.xml
+
+   ```bash
+    <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="PUT YOUR GOOGLE MAPS API KEY HERE" />
+    ```
+
+3. Run the app in Android Studio from emulator or physical device.
 
 
 
