@@ -4,12 +4,15 @@ import android.app.Application
 import android.content.Context
 import androidx.datastore.preferences.preferencesDataStore
 import com.tamaracapstone.tamara_android.data.repository.AuthRepositoryImpl
+import com.tamaracapstone.tamara_android.data.repository.WeatherRepositoryImpl
 import com.tamaracapstone.tamara_android.data.source.local.UserPreferenceImpl
 import com.tamaracapstone.tamara_android.data.source.remote.ApiConfig
 import com.tamaracapstone.tamara_android.domain.usecase.GetUserUseCase
 import com.tamaracapstone.tamara_android.domain.usecase.LoginUseCase
 import com.tamaracapstone.tamara_android.domain.usecase.LogoutUseCase
 import com.tamaracapstone.tamara_android.domain.usecase.RegisterUseCase
+import com.tamaracapstone.tamara_android.domain.usecase.WeatherUseCase
+import com.tamaracapstone.tamara_android.ui.dashboard.home.HomeViewModel
 import com.tamaracapstone.tamara_android.ui.dashboard.profile.ProfileViewModel
 import com.tamaracapstone.tamara_android.ui.login.LoginViewModel
 import com.tamaracapstone.tamara_android.ui.register.RegisterViewModel
@@ -46,12 +49,18 @@ object Locator {
             getUserUseCase = getUserUseCase,
             logoutUseCase = logoutUseCase
         )
+    val homeViewModelFactory
+        get() = HomeViewModel.Factory(
+            weatherUseCase = weatherUseCase
+        )
+
 
     //usecase injection
     private val loginUseCase get() = LoginUseCase(userPreferencesRepository, authRepository)
     private val registerUseCase get() = RegisterUseCase(authRepository)
     private val getUserUseCase get() = GetUserUseCase(userPreferencesRepository)
     private val logoutUseCase get() = LogoutUseCase(userPreferencesRepository)
+    private val weatherUseCase get() = WeatherUseCase(weatherRepository)
 
     //repository injection
     private val userPreferencesRepository by lazy {
@@ -60,4 +69,8 @@ object Locator {
     private val authRepository by lazy {
         AuthRepositoryImpl(ApiConfig(requireApplication.dataStore).apiService)
     }
+    private val weatherRepository by lazy {
+        WeatherRepositoryImpl(ApiConfig(requireApplication.dataStore).apiService)
+    }
+
 }

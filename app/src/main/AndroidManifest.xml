@@ -21,6 +21,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tamara_android"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="PUT YOUR GOOGLE MAPS API KEY HERE" />
+
         <activity
             android:name=".ui.analisisproduktifitas.resultanalisis.ResultAnalisisActivity"
             android:exported="false" />

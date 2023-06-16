@@ -1,5 +1,6 @@
 package com.tamaracapstone.tamara_android.ui.dashboard.community.askcommunity
 
+import com.tamaracapstone.tamara_android.ui.dashboard.home.HomeFragment
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -9,7 +10,6 @@ import android.widget.Spinner
 import androidx.activity.result.contract.ActivityResultContracts
 import com.tamaracapstone.tamara_android.R
 import com.tamaracapstone.tamara_android.databinding.ActivityAskCommunityBinding
-import com.tamaracapstone.tamara_android.ui.dashboard.home.HomeFragment
 import com.tamaracapstone.tamara_android.utils.uriToFile
 import java.io.File
 
