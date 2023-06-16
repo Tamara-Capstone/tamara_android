@@ -35,6 +35,7 @@ This application is implementing MVVM architecture pattern where the view (activ
 - Kotlin programming language
 - Retrofit2
 - Circle ImageView
+- Google MAPS API
 
 
 ## REST API
