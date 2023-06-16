@@ -140,6 +140,10 @@
     <string name="_17_juni_2023">17 Juni 2023</string>
     <string name="_16_juni_2023">16 Juni 2023</string>
     <string name="imgplant">imgPlant</string>
+    <string name="tani_maju_sejahtera">Tani Maju Sejahtera</string>
+    <string name="ramalan_cuaca_3_hari">Ramalan Cuaca 3 Hari</string>
+    <string name="_31">31</string>
+    <string name="pemberian_pupuk_tidak_disarankan">Pemberian pupuk tidak disarankan</string>
 
     <string-array name="plants_array">
         <item>Singkong</item>
