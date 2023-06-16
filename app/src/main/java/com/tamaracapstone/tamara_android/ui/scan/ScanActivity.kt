@@ -16,6 +16,8 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.FileProvider
 import com.tamaracapstone.tamara_android.R
 import com.tamaracapstone.tamara_android.databinding.ActivityScanBinding
+import com.tamaracapstone.tamara_android.ui.analisisproduktifitas.resultanalisis.ResultAnalisisActivity
+import com.tamaracapstone.tamara_android.ui.scan.detailscan.DetailScanAcitivity
 import com.tamaracapstone.tamara_android.utils.checkPermissionsGranted
 import com.tamaracapstone.tamara_android.utils.createCustomTempFile
 import com.tamaracapstone.tamara_android.utils.reduceFileImage
@@ -43,6 +45,11 @@ class ScanActivity : AppCompatActivity() {
 
         binding.btnCamera.setOnClickListener {
             startTakePhoto()
+        }
+
+        binding.btnProses.setOnClickListener {
+            val intent = Intent(this, DetailScanAcitivity::class.java)
+            startActivity(intent)
         }
 
         val spinner: Spinner = findViewById(R.id.plant_spinner)

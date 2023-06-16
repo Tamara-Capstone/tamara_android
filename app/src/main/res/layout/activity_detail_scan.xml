@@ -1,50 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.DetailScanAcitivity">
+    tools:context=".ui.scan.detailscan.DetailScanAcitivity">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:contentDescription="imgPlant"
-        android:scaleType="center"
-        android:src="@drawable/img_plant"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <TextView
-        android:id="@+id/title_tanaman"
-        android:layout_width="292dp"
-        android:layout_height="28dp"
-        android:paddingLeft="24dp"
-        android:text="@string/nama_tanaman"
-        android:paddingTop="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/item_desc_tanaman"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.21"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.64"
-        android:fontFamily="@font/poppinsmedium"
-        android:textSize="14sp"/>
-
-    <include
-        android:id="@+id/item_desc_tanaman"
-        layout="@layout/item_desc_tanaman"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_tanaman" />
+        android:paddingBottom="16dp">
 
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:contentDescription="@string/imgplant"
+            android:scaleType="center"
+            android:src="@drawable/img_plant"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="0dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/title_tanaman"
+            android:layout_width="292dp"
+            android:layout_height="28dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:paddingLeft="24dp"
+            android:paddingTop="5dp"
+            android:text="@string/nama_tanaman"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/item_desc_tanaman"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.21"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:layout_constraintVertical_bias="0.64" />
+
+        <include
+            android:id="@+id/item_desc_tanaman"
+            layout="@layout/item_desc_tanaman"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_tanaman" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

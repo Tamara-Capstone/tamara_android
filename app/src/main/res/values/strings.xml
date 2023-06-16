@@ -31,7 +31,7 @@
     <string name="takepicture">Ambil Foto</string>
     <string name="analisis">Analisis Produktivitas</string>
     <string name="analisisnow">Analisis Sekarang</string>
-    <string name="alamatdetail">Kecamatan Medan Kota, 15 Mei</string>
+    <string name="alamatdetail">Kecamatan Medan Kota, 15 Juni 2023</string>
     <string name="saran_kegiatandetail">Hujan di pagi hari, berawan di sore hari. Kemungkinan, hari ini <b>buruk untuk pemberian pestisida</b> </string>
     <string name="ramalan">Ramalan 3 Hari</string>
     <string name="hari">Selasa</string>
@@ -72,7 +72,7 @@
     <string name="pengendaliankimia">Selalu pertimbangkan pendekatan terpadu dengan tindakan pencegahan bersama dengan perawatan biologis, jika tersedia. </string>
     <string name="hasilscan">Hasil Scan</string>
     <string name="info">Silahkan cek dari kemungkinan yang di bawah ini yang cocok dengan keadaan tanaman Anda</string>
-    <string name="tanggal_dummy">20 Mei</string>
+    <string name="tanggal_dummy">15 Juni 2023</string>
     <string name="comma">, </string>
     <string name="derajat_celcius">\u2103</string>
     <string name="derajat">\u00B0</string>
@@ -88,7 +88,7 @@
     <string name="kamera">KAMERA</string>
     <string name="proses">PROSES</string>
 
-    <string name="tidak_mendapatkan_akses_kamera"></string>
+    <string name="tidak_mendapatkan_akses_kamera">Tidak mendapat akses kamera</string>
     <string name="analisis_produktifitas">Analisis Produktifitas</string>
     <string name="keterangan_no_analisis">Waduh, sepertinya kamu belum mengisi data untuk kami analisis.</string>
     <string name="isi_data">Isi Data</string>
@@ -131,6 +131,15 @@
     <string name="_400000">400000</string>
     <string name="keuntungan">Keuntungan</string>
     <string name="perbarui_data">Perbarui Data</string>
+    <string name="val_cuaca">Cerah</string>
+    <string name="_30">30</string>
+    <string name="_28">28</string>
+    <string name="_32">32</string>
+    <string name="_25">25</string>
+    <string name="_18_juni_2023">18 Juni 2023</string>
+    <string name="_17_juni_2023">17 Juni 2023</string>
+    <string name="_16_juni_2023">16 Juni 2023</string>
+    <string name="imgplant">imgPlant</string>
 
     <string-array name="plants_array">
         <item>Singkong</item>

@@ -31,10 +31,7 @@
             android:name=".ui.analisisproduktifitas.noanalisis.NoAnalisisiActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.ScanResultActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.scan.OutputScanActivity"
+            android:name=".ui.scan.outputscan.OutputScanActivity"
             android:exported="false" />
         <activity
             android:name=".ui.scan.ScanActivity"
@@ -43,22 +40,16 @@
             android:name=".ui.dashboard.DashboardActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.DetailDiscussion"
+            android:name=".ui.dashboard.community.detaildiscussion.DetailDiscussion"
             android:exported="false" />
         <activity
-            android:name=".ui.AskCommunityActivity"
+            android:name=".ui.dashboard.community.askcommunity.AskCommunityActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.DetailScanAcitivity"
+            android:name=".ui.scan.detailscan.DetailScanAcitivity"
             android:exported="false" />
         <activity
-            android:name=".ui.WeatherActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.ProfileActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.CommunityActivity"
+            android:name=".ui.weather.WeatherActivity"
             android:exported="false" />
         <activity
             android:name=".ui.register.RegisterActivity"

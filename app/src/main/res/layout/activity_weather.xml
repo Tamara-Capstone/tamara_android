@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/md_theme_light_background"
-    tools:context=".ui.WeatherActivity">
+    tools:context=".ui.weather.WeatherActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="412dp"
@@ -49,7 +49,7 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="@string/derajat"
+                        android:text="@string/_30"
                         android:textSize="20sp"
                         tools:ignore="TextSizeCheck" />
 
@@ -58,7 +58,7 @@
                         android:layout_width="200dp"
                         android:layout_height="30dp"
                         android:fontFamily="@font/poppinsregular"
-                        android:text="@string/derajatdetail"
+                        android:text="@string/derajat_celcius"
                         android:textSize="20sp"
                         tools:ignore="TextSizeCheck" />
 
@@ -78,11 +78,10 @@
                 android:id="@+id/imgCuaca"
                 android:layout_width="65dp"
                 android:layout_height="60dp"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:layout_centerInParent="true"
-                android:contentDescription="imgCloud"
                 android:paddingEnd="15dp"
-                android:src="@drawable/ic_cloudy" />
+                android:src="@drawable/ic_suny" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
     <!-- End Cuaca-->
@@ -169,8 +168,8 @@
                             android:fontFamily="@font/poppinsregular"
                             android:paddingLeft="20dp"
                             android:paddingTop="5dp"
-                            android:text="@string/hari"
-                            android:textSize="12dp"
+                            android:text="@string/_16_juni_2023"
+                            android:textSize="12sp"
                             tools:ignore="TextSizeCheck" />
 
                         <ImageView
@@ -185,8 +184,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppinsregular"
-                            android:text="@string/derajat"
-                            android:textSize="12dp"
+                            android:text="@string/_28"
+                            android:textSize="12sp"
                             tools:ignore="TextSizeCheck" />
 
                         <TextView
@@ -195,7 +194,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppinsregular"
                             android:text="@string/derajatdetail"
-                            android:textSize="12dp"
+                            android:textSize="12sp"
                             tools:ignore="TextSizeCheck" />
                     </LinearLayout>
 
@@ -226,8 +225,8 @@
                             android:fontFamily="@font/poppinsregular"
                             android:paddingLeft="20dp"
                             android:paddingTop="5dp"
-                            android:text="@string/hari"
-                            android:textSize="12dp"
+                            android:text="@string/_17_juni_2023"
+                            android:textSize="12sp"
                             tools:ignore="TextSizeCheck" />
 
                         <ImageView
@@ -242,8 +241,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppinsregular"
-                            android:text="@string/derajat"
-                            android:textSize="12dp"
+                            android:text="@string/_32"
+                            android:textSize="12sp"
                             tools:ignore="TextSizeCheck" />
 
                         <TextView
@@ -252,7 +251,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppinsregular"
                             android:text="@string/derajatdetail"
-                            android:textSize="12dp"
+                            android:textSize="12sp"
                             tools:ignore="TextSizeCheck" />
                     </LinearLayout>
 
@@ -283,7 +282,7 @@
                             android:fontFamily="@font/poppinsregular"
                             android:paddingLeft="20dp"
                             android:paddingTop="5dp"
-                            android:text="@string/hari"
+                            android:text="@string/_18_juni_2023"
                             android:textSize="12sp"
                             tools:ignore="TextSizeCheck" />
 
@@ -299,7 +298,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppinsregular"
-                            android:text="@string/derajat"
+                            android:text="@string/_25"
                             android:textSize="12sp"
                             tools:ignore="TextSizeCheck" />
 

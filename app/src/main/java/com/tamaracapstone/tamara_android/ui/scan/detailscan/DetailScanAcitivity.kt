@@ -1,4 +1,4 @@
-package com.tamaracapstone.tamara_android.ui
+package com.tamaracapstone.tamara_android.ui.scan.detailscan
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

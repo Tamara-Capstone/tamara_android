@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.tamaracapstone.tamara_android.databinding.FragmentHomeBinding
+import com.tamaracapstone.tamara_android.ui.weather.WeatherActivity
+import com.tamaracapstone.tamara_android.ui.analisisproduktifitas.noanalisis.NoAnalisisiActivity
 import com.tamaracapstone.tamara_android.ui.scan.ScanActivity
 
 class HomeFragment : Fragment() {
@@ -25,8 +27,20 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.itemCuacaHome.cardItemCuaca.setOnClickListener {
+            Intent(requireActivity(), WeatherActivity::class.java).apply {
+                requireActivity().startActivity(this)
+            }
+        }
+
         binding.itemScanTanamanHome.btnTakepicture.setOnClickListener {
             Intent(requireActivity(), ScanActivity::class.java).apply {
+                requireActivity().startActivity(this)
+            }
+        }
+
+        binding.itemAnalisisProduktivitas.btnAnalisis.setOnClickListener {
+            Intent(requireActivity(), NoAnalisisiActivity::class.java).apply {
                 requireActivity().startActivity(this)
             }
         }
