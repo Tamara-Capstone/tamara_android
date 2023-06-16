@@ -67,7 +67,7 @@ This application is implementing MVVM architecture pattern where the view (activ
 
 ## APK File
 
-You can download the apk file [here]([https://github.com/Tamara-Capstone/tamara-backend](https://drive.google.com/file/d/13n46TUTFH_GLYJL9Ja52-1taJD8AKVuI/view?usp=sharing)https://drive.google.com/file/d/13n46TUTFH_GLYJL9Ja52-1taJD8AKVuI/view?usp=sharing)
+You can download the apk file here [Tamara APK](https://drive.google.com/file/d/13n46TUTFH_GLYJL9Ja52-1taJD8AKVuI/view?usp=sharing)
    
 
 
